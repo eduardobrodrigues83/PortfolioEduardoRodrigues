@@ -1,831 +1,663 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eduardo Rodrigues | Gerente de Projetos Sênior & PMO HealthTech</title>
-  <meta name="description" content="Portfólio Executivo de Eduardo Rodrigues - Gerente de Projetos Sênior HealthTech. +188 projetos entregues, +88 clientes atendidos, R$ 1,7M+ em faturamento destravado, +13.400 horas de gestão executadas.">
-  <meta name="keywords" content="Eduardo Rodrigues, Gerente de Projetos, PMO, HealthTech, Funed, EBSERH, Laboratorio Sanitas, Laboratorio Qualidade, Clinica Sao Marcos, RIS, LIS, PACS, Pixeon, HP, PMP">
+  <title>Eduardo Rodrigues | Gerente de Projetos de TI Sênior & PMO | Saúde Digital</title>
+  <meta name="description" content="Transformando o caos operacional em entregas previsíveis na Saúde Digital (RIS, LIS, PACS). +188 projetos entregues, +88 clientes, R$ 1,7M+ faturamento destravado.">
+  <meta name="keywords" content="Eduardo Rodrigues, Gerente de Projetos, PMO, Saúde Digital, RIS, LIS, PACS, Korus, FUNED, Lacen-MG, IT Management">
   <meta name="author" content="Eduardo Rodrigues">
 
   <!-- OpenGraph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Eduardo Rodrigues | Gerente de Projetos Sênior & PMO HealthTech">
-  <meta property="og:description" content="+188 projetos entregues para 88 clientes de saúde, R$ 1,7M+ destravados e +13.400h de gestão executadas. Case FUNED: -73% tempo de exames.">
+  <meta property="og:title" content="Eduardo Rodrigues | Gerente de Projetos de TI Sênior & PMO">
+  <meta property="og:description" content="Transformando o caos operacional em entregas previsíveis na Saúde Digital. Case FUNED: -73% no tempo de laudos.">
   <meta property="og:image" content="/assets/profile.jpg">
-  <meta property="og:url" content="https://github.com/eduardobrodrigues83/PortfolioEduardoRodrigues">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Stylesheet -->
+  <!-- Tailwind CSS via CDN for utility classes & modern styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0B0F17',
+              cardDark: '#131A29',
+              accent: '#2563EB',
+              cyan: '#06B6D4',
+              emerald: '#10B981',
+              lightBg: '#F8FAFC',
+              borderDark: '#1E293B',
+              borderLight: '#E2E8F0'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/src/style.css">
 </head>
-<body>
-  <!-- Header / Navigation -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar-container">
-      <a href="#hero" class="brand-logo">
-        <span class="logo-accent">E</span>duardo<span class="logo-dot">.</span>Rodrigues
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Header Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-brand-dark/80 border-b border-slate-800/60" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-display font-bold tracking-tight text-white flex items-center gap-1.5 group">
+        <span class="w-3 h-3 rounded-full bg-cyan-400 group-hover:scale-125 transition-transform"></span>
+        <span>Eduardo<span class="text-cyan-400">.</span>Rodrigues</span>
       </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#resumo-recrutador" class="nav-link nav-highlight"><i data-lucide="zap"></i> Resumo Rápido</a>
-        <a href="#impacto-global" class="nav-link">Impacto Global</a>
-        <a href="#casos-sucesso" class="nav-link">Casos de Sucesso</a>
-        <a href="#case-funed" class="nav-link">Case FUNED (-73%)</a>
-        <a href="#experiencia" class="nav-link">Experiência</a>
-        <a href="#competencias" class="nav-link">Competências</a>
-        <a href="#contato" class="nav-link btn-nav-cta">Contato Direto</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#hero" class="hover:text-cyan-400 transition-colors">O Problema</a>
+        <a href="#autoridade" class="hover:text-cyan-400 transition-colors">Solução em Números</a>
+        <a href="#case-funed" class="hover:text-cyan-400 transition-colors">Case FUNED (-73%)</a>
+        <a href="#stack" class="hover:text-cyan-400 transition-colors">Metodologias & Stack</a>
+        <a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a>
       </nav>
 
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
-        <i data-lucide="menu"></i>
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="https://wa.me/5511985344770?text=Ol%C3%A1%20Eduardo,%20analisei%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-900/30 hover:shadow-emerald-700/40">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" id="mobileToggle" aria-label="Abrir Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div class="hidden md:hidden bg-brand-dark/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 font-medium text-slate-300" id="navLinks">
+      <a href="#hero" class="block py-2 hover:text-cyan-400">O Problema</a>
+      <a href="#autoridade" class="block py-2 hover:text-cyan-400">Solução em Números</a>
+      <a href="#case-funed" class="block py-2 hover:text-cyan-400">Case FUNED (-73%)</a>
+      <a href="#stack" class="block py-2 hover:text-cyan-400">Metodologias & Stack</a>
+      <a href="#contato" class="block py-2 hover:text-cyan-400">Contato</a>
+      <a href="https://wa.me/5511985344770?text=Ol%C3%A1%20Eduardo,%20analisei%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." 
+         target="_blank" rel="noopener noreferrer" 
+         class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-600 text-white font-semibold text-xs uppercase tracking-wider">
+        <i data-lucide="message-square" class="w-4 h-4"></i>
+        <span>Falar no WhatsApp</span>
+      </a>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-bg-glow"></div>
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-status-pill">
-            <span class="status-dot pulse"></span>
-            <span>Gerente de Projetos Sênior | PMO HealthTech IT</span>
-          </div>
+  <main class="pt-20">
 
-          <h1 class="hero-title">
-            Eduardo Rodrigues
-          </h1>
-          <h2 class="hero-subtitle-headline gradient-text">
-            Liderança Estratégica & Gestão de Projetos de Alta Complexidade em Saúde Digital
-          </h2>
+    <!-- 1. HERO SECTION (O Gancho & O Problema) -->
+    <section class="relative min-h-[90vh] flex items-center py-16 lg:py-24 bg-brand-dark overflow-hidden" id="hero">
+      <!-- Glow & Ambient Orbs -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+      <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-          <p class="hero-subtitle">
-            Mais de <strong>15 anos de atuação</strong> na condução de projetos enterprise de TI e Saúde (RIS, LIS, PACS). Comprovados <strong>188 projetos entregues para 88 clientes</strong>, destravando mais de <strong>R$ 1,7 Milhão em faturamento</strong> e orquestrando <strong>+13.400 horas de execução técnica</strong>.
-          </p>
-
-          <!-- Top Highlight Chips -->
-          <div class="hero-badge-chips">
-            <div class="badge-chip chip-emerald">
-              <i data-lucide="check-circle-2"></i>
-              <span>188 Projetos Entregues</span>
-            </div>
-            <div class="badge-chip chip-indigo">
-              <i data-lucide="dollar-sign"></i>
-              <span>R$ 1,7M+ Faturamento Eventual</span>
-            </div>
-            <div class="badge-chip chip-cyan">
-              <i data-lucide="clock"></i>
-              <span>+13.400h Executadas</span>
-            </div>
-            <div class="badge-chip chip-emerald">
-              <i data-lucide="trending-down"></i>
-              <span>-73% Tempo de Laudos (FUNED)</span>
-            </div>
-          </div>
-
-          <div class="hero-actions">
-            <a href="https://wa.me/5511985344770?text=Olá%20Eduardo,%20analisei%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <i data-lucide="message-square"></i>
-              Falar no WhatsApp: (11) 98534-4770
-            </a>
-            <button class="btn btn-outline" id="openCvModalBtn">
-              <i data-lucide="file-text"></i>
-              Currículo PDF
-            </button>
-            <a href="https://www.linkedin.com/in/eduardo-rodrigues-48154525" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-              <i data-lucide="linkedin"></i>
-              LinkedIn
-            </a>
-          </div>
-
-          <div class="hero-quick-contacts">
-            <div class="contact-pill" id="copyEmailBtn" data-email="eduardobr83@icloud.com" title="Clique para copiar e-mail">
-              <i data-lucide="mail"></i>
-              <span>eduardobr83@icloud.com</span>
-              <i data-lucide="copy" class="copy-icon"></i>
-            </div>
-            <div class="contact-pill">
-              <i data-lucide="map-pin"></i>
-              <span>São Bernardo do Campo, SP (Presencial / Híbrido / Remoto)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-media">
-          <div class="profile-card-wrapper">
-            <div class="profile-card-glow"></div>
-            <div class="profile-card">
-              <div class="profile-image-container">
-                <img src="/assets/profile.jpg" alt="Eduardo Rodrigues - Gerente de Projetos Sênior" class="profile-img">
-                <div class="profile-badge">
-                  <i data-lucide="award"></i>
-                  <span>188 Projetos em 88 Clientes</span>
-                </div>
-              </div>
-              <div class="profile-card-footer">
-                <h3>Eduardo Rodrigues</h3>
-                <p>Gerente de Projetos Sênior | PMO</p>
-                <div class="profile-tags">
-                  <span class="tag tag-highlight">188 Entregas</span>
-                  <span class="tag">R$ 1,7M+ Receita</span>
-                  <span class="tag">13.400h Gestão</span>
-                  <span class="tag">LIS / RIS / PACS</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recruiter Fast Summary (Visão de 30 Segundos para Recrutadores) -->
-    <section class="recruiter-summary-section" id="resumo-recrutador">
-      <div class="container">
-        <div class="recruiter-box glass-panel">
-          <div class="recruiter-box-header">
-            <span class="recruiter-badge"><i data-lucide="user-check"></i> Cartão de Resumo para Recrutadores & Headhunters</span>
-            <h2>Visão Geral do Perfil em 30 Segundos</h2>
-          </div>
-
-          <div class="recruiter-grid">
-            <div class="recruiter-col">
-              <div class="recruiter-item">
-                <i data-lucide="briefcase" class="item-icon"></i>
-                <div>
-                  <h4>Cargo Alvo & Senioridade</h4>
-                  <p>Gerente de Projetos Sênior, Coordenador de PMO, Gerente de Operações IT / HealthTech.</p>
-                </div>
-              </div>
-              <div class="recruiter-item">
-                <i data-lucide="check-circle-2" class="item-icon"></i>
-                <div>
-                  <h4>Volume de Entregas</h4>
-                  <p><strong>188 projetos concluídos</strong> com sucesso para <strong>88 clientes</strong> do setor de saúde.</p>
-                </div>
-              </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Content Left -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Profile Status Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/70 text-xs font-semibold text-cyan-300 backdrop-blur-md">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Eduardo Rodrigues | Gerente de Projetos de TI Sênior & PMO | Saúde Digital (RIS, LIS, PACS)</span>
             </div>
 
-            <div class="recruiter-col">
-              <div class="recruiter-item">
-                <i data-lucide="dollar-sign" class="item-icon"></i>
-                <div>
-                  <h4>Gestão de Receita & Valor</h4>
-                  <p>Destravamento de <strong>+R$ 1,7 Milhão</strong> em faturamento eventual + expansão em MRR (receita recorrente mensal).</p>
-                </div>
-              </div>
-              <div class="recruiter-item">
-                <i data-lucide="clock" class="item-icon"></i>
-                <div>
-                  <h4>Horas de Execução Técnica</h4>
-                  <p>Mais de <strong>13.400 horas</strong> de projetos orquestradas e entregues em operação assistida.</p>
-                </div>
-              </div>
-            </div>
+            <!-- Headline -->
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white leading-tight tracking-tight">
+              Transformando o caos operacional em entregas previsíveis na <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400">Saúde Digital</span>.
+            </h1>
 
-            <div class="recruiter-col">
-              <div class="recruiter-item">
-                <i data-lucide="trending-down" class="item-icon"></i>
-                <div>
-                  <h4>Maior Resultado Qualificado</h4>
-                  <p>Implantação LIS Korus na FUNED/Lacen-MG: <strong>redução de 11 dias (259h) para 3 dias (70h)</strong> na liberação de exames (-73%).</p>
-                </div>
-              </div>
-              <div class="recruiter-item">
-                <i data-lucide="graduation-cap" class="item-icon"></i>
-                <div>
-                  <h4>Formação & Certificação</h4>
-                  <p>Bacharelado em Ciência de Dados e IA (UniDomBosco) | Certificação PMP® (Em preparação).</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <!-- Subtítulo -->
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
+              Projetos de tecnologia na saúde não podem falhar. Prazos estourados e escopos vagos custam caro. Atuo como a ponte entre a operação, a engenharia e o negócio para garantir que a tecnologia sirva à vida.
+            </p>
 
-    <!-- Global Impact Metrics (Resumo de Carreira em Números) -->
-    <section class="kpi-section" id="impacto-global">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-badge"><i data-lucide="bar-chart-3"></i> Impacto Global de Carreira</span>
-          <h2 class="section-title">Resultados Consolidados em Números</h2>
-          <p class="section-subtitle">Métricas quantitativas alcançadas ao longo de mais de 15 anos na liderança de projetos de saúde digital.</p>
-        </div>
+            <!-- Botões de Ação -->
+            <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a href="https://wa.me/5511985344770?text=Ol%C3%A1%20Eduardo,%20analisei%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." 
+                 target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-bold text-sm tracking-wide shadow-xl shadow-emerald-900/30 hover:shadow-emerald-600/40 transform hover:-translate-y-0.5 transition-all">
+                <i data-lucide="message-square" class="w-5 h-5"></i>
+                <span>Falar no WhatsApp</span>
+              </a>
 
-        <div class="kpi-grid">
-          <div class="kpi-card highlight-card-emerald" data-tilt>
-            <div class="kpi-icon icon-emerald"><i data-lucide="check-square"></i></div>
-            <div class="kpi-number" data-target="188">+188</div>
-            <div class="kpi-label">Projetos Entregues</div>
-            <p class="kpi-desc">Conclusão bem-sucedida de 188 projetos para 88 clientes no setor de saúde.</p>
-          </div>
-
-          <div class="kpi-card" data-tilt>
-            <div class="kpi-icon"><i data-lucide="dollar-sign"></i></div>
-            <div class="kpi-number">R$ 1,7M+</div>
-            <div class="kpi-label">Faturamento Eventual</div>
-            <p class="kpi-desc">Receita eventual destravada e ativação contínua de faturamento recorrente.</p>
-          </div>
-
-          <div class="kpi-card" data-tilt>
-            <div class="kpi-icon"><i data-lucide="clock"></i></div>
-            <div class="kpi-number" data-target="13400">13.400h+</div>
-            <div class="kpi-label">Horas de Gestão</div>
-            <p class="kpi-desc">Horas técnicas orquestradas, planejadas e transicionadas para operação.</p>
-          </div>
-
-          <div class="kpi-card" data-tilt>
-            <div class="kpi-icon"><i data-lucide="building"></i></div>
-            <div class="kpi-number" data-target="88">88</div>
-            <div class="kpi-label">Clientes de Saúde</div>
-            <p class="kpi-desc">Hospitais, laboratórios e clínicas públicas e privadas atendidas.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO HIGHLIGHTS: 5 TOP CLIENT CASES -->
-    <section class="portfolio-cases-section" id="casos-sucesso">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-badge"><i data-lucide="award"></i> Destaques do Portfólio</span>
-          <h2 class="section-title">Top 5 Casos de Sucesso & Retenção</h2>
-          <p class="section-subtitle">Projetos agrupados com melhores indicadores de volume, faturamento, tempo e expansão de conta.</p>
-        </div>
-
-        <div class="portfolio-cases-grid">
-          <!-- Case 1: FUNED -->
-          <div class="case-card glass-panel case-featured">
-            <div class="case-card-badge"><i data-lucide="star"></i> Case Destaque Público</div>
-            <div class="case-card-header">
-              <h3>1. FUNED (Fundação Ezequiel Dias)</h3>
-              <span class="case-card-category">Saúde Pública / Lacen-MG</span>
-            </div>
-            <div class="case-card-stats">
-              <div class="case-stat">
-                <span class="stat-num">3</span>
-                <span class="stat-lbl">Projetos Complexos</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">23 Meses</span>
-                <span class="stat-lbl">Atuação Contínua</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">1.215h</span>
-                <span class="stat-lbl">Implantação Técnica</span>
-              </div>
-            </div>
-            <div class="case-card-financials">
-              <div class="fin-item">
-                <i data-lucide="dollar-sign"></i> <strong>R$ 149.000</strong> <span class="fin-lbl">Faturamento Eventual</span>
-              </div>
-              <div class="fin-item">
-                <i data-lucide="trending-up"></i> <strong>+R$ 26.000 /mês</strong> <span class="fin-lbl">Faturamento Recorrente</span>
-              </div>
-            </div>
-            <div class="case-card-impact">
-              <i data-lucide="zap" class="impact-icon"></i>
-              <p><strong>Impacto Assistencial:</strong> Liberação de laudos caiu de 11 dias para 3 dias (-73% de tempo de espera em exames laboratoriais).</p>
-            </div>
-          </div>
-
-          <!-- Case 2: EBSERH Uberlândia -->
-          <div class="case-card glass-panel">
-            <div class="case-card-header">
-              <h3>2. Hosp. de Clínicas de Uberlândia | EBSERH</h3>
-              <span class="case-card-category">Hospital Universitário Federal</span>
-            </div>
-            <div class="case-card-stats">
-              <div class="case-stat">
-                <span class="stat-num">3</span>
-                <span class="stat-lbl">Projetos Entregues</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">15 Meses</span>
-                <span class="stat-lbl">Execução Ágil</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">828h</span>
-                <span class="stat-lbl">Coordenação Técnica</span>
-              </div>
-            </div>
-            <div class="case-card-financials">
-              <div class="fin-item">
-                <i data-lucide="dollar-sign"></i> <strong>R$ 125.600</strong> <span class="fin-lbl">Receita de Implantação Liberada</span>
-              </div>
-            </div>
-            <p class="case-card-desc">Execução ágil e concentrada em ambiente hospitalar de alta complexidade, coordenando equipe técnica especializada.</p>
-          </div>
-
-          <!-- Case 3: Laboratório Sanitas -->
-          <div class="case-card glass-panel">
-            <div class="case-card-header">
-              <h3>3. Laboratório Sanitas</h3>
-              <span class="case-card-category">Medicina Diagnóstica (Expansão de Conta)</span>
-            </div>
-            <div class="case-card-stats">
-              <div class="case-stat">
-                <span class="stat-num">7</span>
-                <span class="stat-lbl">Projetos Implantados</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">25 Meses</span>
-                <span class="stat-lbl">Relacionamento</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">703h</span>
-                <span class="stat-lbl">Gestão de Escopo</span>
-              </div>
-            </div>
-            <div class="case-card-financials">
-              <div class="fin-item">
-                <i data-lucide="dollar-sign"></i> <strong>R$ 113.300</strong> <span class="fin-lbl">Faturamento Eventual</span>
-              </div>
-              <div class="fin-item">
-                <i data-lucide="trending-up"></i> <strong>+R$ 22.400 /mês</strong> <span class="fin-lbl">Recorrência Agregada</span>
-              </div>
-            </div>
-            <p class="case-card-desc">Excelente indicador de fidelização e expansão de conta (upsell), mantendo implementações contínuas por mais de 2 anos.</p>
-          </div>
-
-          <!-- Case 4: Laboratório Qualidade -->
-          <div class="case-card glass-panel">
-            <div class="case-card-header">
-              <h3>4. Laboratório Qualidade</h3>
-              <span class="case-card-category">Rede de Laboratórios</span>
-            </div>
-            <div class="case-card-stats">
-              <div class="case-stat">
-                <span class="stat-num">7</span>
-                <span class="stat-lbl">Frentes de Projetos</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">25 Meses</span>
-                <span class="stat-lbl">Gestão Estendida</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">446h</span>
-                <span class="stat-lbl">Atividades Operacionais</span>
-              </div>
-            </div>
-            <div class="case-card-financials">
-              <div class="fin-item">
-                <i data-lucide="dollar-sign"></i> <strong>R$ 78.200</strong> <span class="fin-lbl">Faturamento Serv. Destravado</span>
-              </div>
-            </div>
-            <p class="case-card-desc">Relacionamento de implantação estendido por 25 meses com alto rigor na manutenção de cronogramas e entregas de escopo.</p>
-          </div>
-
-          <!-- Case 5: Clínica São Marcos -->
-          <div class="case-card glass-panel">
-            <div class="case-card-header">
-              <h3>5. Clínica São Marcos</h3>
-              <span class="case-card-category">Centro Médico Diagnóstico</span>
-            </div>
-            <div class="case-card-stats">
-              <div class="case-stat">
-                <span class="stat-num">2</span>
-                <span class="stat-lbl">Projetos Críticos</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">9,5 Meses</span>
-                <span class="stat-lbl">Ciclo Rápido (Velocidade)</span>
-              </div>
-              <div class="case-stat">
-                <span class="stat-num">493h</span>
-                <span class="stat-lbl">Execução Intensa</span>
-              </div>
-            </div>
-            <div class="case-card-financials">
-              <div class="fin-item">
-                <i data-lucide="dollar-sign"></i> <strong>R$ 68.700</strong> <span class="fin-lbl">Receita Eventual Garantida</span>
-              </div>
-              <div class="fin-item">
-                <i data-lucide="trending-up"></i> <strong>+R$ 21.000 /mês</strong> <span class="fin-lbl">Ativação Recorrente</span>
-              </div>
-            </div>
-            <p class="case-card-desc">Alta eficiência de tempo. Projetos críticos finalizados em ciclo rápido de 9,5 meses com ativação imediata de faturamento recorrente.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FLAGSHIP CASE STUDY: FUNED / Lacen-MG (com Notícia Real) -->
-    <section class="case-study-section" id="case-funed">
-      <div class="container">
-        <div class="case-study-card glass-panel">
-          <div class="case-header">
-            <div class="case-title-area">
-              <span class="case-badge"><i data-lucide="newspaper"></i> Matéria Real & Case de Sucesso</span>
-              <h2>Implantação LIS Korus na Fundação Ezequiel Dias (FUNED / Lacen-MG)</h2>
-              <p class="case-subtitle">Modernização do Laboratório Central de Saúde Pública de Minas Gerais. 3 projetos complexos, 23 meses de atuação, 1.215h de implantação técnica e R$ 149k de receita eventual + R$ 26k/mês em faturamento recorrente.</p>
-            </div>
-            <div class="case-source-box">
-              <span class="source-label">Fonte Oficial da Informação:</span>
-              <a href="https://www.oeste360.com/noticia/284811/funed-reduz-tempo-de-liberacao-dos-exames" target="_blank" rel="noopener noreferrer" class="source-link">
-                <i data-lucide="external-link"></i> Secom Minas Gerais / Portal Oeste360
+              <a href="https://www.linkedin.com/in/eduardo-rodrigues-48154525" 
+                 target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 text-white font-semibold text-sm border border-slate-700/80 hover:border-slate-600 shadow-md transform hover:-translate-y-0.5 transition-all">
+                <i data-lucide="linkedin" class="w-5 h-5 text-cyan-400"></i>
+                <span>Ver LinkedIn</span>
               </a>
             </div>
-          </div>
 
-          <!-- Comparison Metric Box -->
-          <div class="case-metrics-comparison">
-            <div class="metric-comparison-box metric-before">
-              <span class="metric-tag">Antes da Implantação (Junho)</span>
-              <div class="metric-val">11 Dias</div>
-              <span class="metric-sub">259 Horas de Tempo Médio</span>
-              <p>Processos manuais registrados em cadernos e papel há mais de 15 anos, sem software dedicado.</p>
-            </div>
-
-            <div class="metric-arrow">
-              <i data-lucide="arrow-right"></i>
-              <span class="arrow-badge">-73%</span>
-            </div>
-
-            <div class="metric-comparison-box metric-after">
-              <span class="metric-tag tag-success">Após LIS Korus (Setembro)</span>
-              <div class="metric-val text-emerald">3 Dias</div>
-              <span class="metric-sub">70 Horas de Tempo Médio</span>
-              <p>Rastreabilidade 100% digital, integração com DataSUS/GAL e monitoramento via Business Intelligence.</p>
-            </div>
-          </div>
-
-          <!-- Key Project Deliverables Grid -->
-          <div class="case-details-grid">
-            <div class="case-detail-item">
-              <div class="detail-icon"><i data-lucide="check-square"></i></div>
-              <div>
-                <h4>Automação de Processo Histórico de 15 Anos</h4>
-                <p>Substituição de rotinas manuais mantidas há mais de uma década por um fluxo 100% automatizado, com rastreabilidade de usuário, data e horário a cada etapa.</p>
+            <!-- Quick Contacts Row -->
+            <div class="pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-6 text-xs text-slate-400">
+              <div class="flex items-center gap-2 cursor-pointer hover:text-cyan-300 transition-colors" id="copyEmailBtn" data-email="eduardobr83@icloud.com">
+                <i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i>
+                <span>eduardobr83@icloud.com</span>
+                <i data-lucide="copy" class="w-3.5 h-3.5 text-slate-500"></i>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+                <span>(11) 98534-4770</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-indigo-400"></i>
+                <span>São Paulo / SP (Presencial, Híbrido ou Remoto)</span>
               </div>
             </div>
 
-            <div class="case-detail-item">
-              <div class="detail-icon"><i data-lucide="pie-chart"></i></div>
-              <div>
-                <h4>Gestão & Inteligência de Dados com BI</h4>
-                <p>Implantação de painéis de Business Intelligence (BI) para acompanhamento do volume diário de exames, identificação imediata de gargalos e monitoramento de exames fora do prazo.</p>
-              </div>
-            </div>
+          </div>
 
-            <div class="case-detail-item">
-              <div class="detail-icon"><i data-lucide="network"></i></div>
-              <div>
-                <h4>Integração >90% com DataSUS / GAL</h4>
-                <p>Integração de mais de 90% dos exames ao Gerenciador Laboratorial do Ministério da Saúde, cobrindo 65% de exames críticos de biologia molecular.</p>
-              </div>
-            </div>
+          <!-- Media / Profile Card Right -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md">
+              <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+              
+              <div class="relative rounded-3xl bg-brand-cardDark border border-slate-800 p-6 shadow-2xl">
+                <div class="relative aspect-[4/4] rounded-2xl overflow-hidden mb-6 bg-slate-900 border border-slate-800">
+                  <img src="/assets/profile.jpg" alt="Eduardo Rodrigues" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-slate-800/80 flex items-center justify-between text-xs font-semibold">
+                    <span class="text-slate-200">Saúde Digital & TI</span>
+                    <span class="text-emerald-400 font-bold flex items-center gap-1">
+                      <i data-lucide="shield-check" class="w-4 h-4"></i> +15 Anos Exp.
+                    </span>
+                  </div>
+                </div>
 
-            <div class="case-detail-item">
-              <div class="detail-icon"><i data-lucide="users"></i></div>
-              <div>
-                <h4>Gestão de Mudança & Curva de Aprendizado</h4>
-                <p>Condução da gestão de mudança e treinamentos contínuos com os servidores públicos, superando a resistência inicial e garantindo rápida adoção.</p>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-xl font-bold font-display text-white">Eduardo Rodrigues</h3>
+                    <span class="text-xs px-2.5 py-1 rounded-md bg-cyan-950 text-cyan-300 border border-cyan-800/50 font-mono">PMO Sênior</span>
+                  </div>
+                  <p class="text-xs text-slate-400 leading-relaxed">
+                    Especialista na governança de projetos de alta complexidade em Saúde Pública e Privada (RIS, LIS, PACS, Interoperabilidade e Integrações).
+                  </p>
+                  
+                  <div class="grid grid-cols-2 gap-2 pt-2 text-center text-xs">
+                    <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+                      <p class="text-cyan-400 font-extrabold text-base">188</p>
+                      <p class="text-[10px] text-slate-400 uppercase tracking-wider">Projetos</p>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+                      <p class="text-emerald-400 font-extrabold text-base">R$ 1,7M+</p>
+                      <p class="text-[10px] text-slate-400 uppercase tracking-wider">Receita</p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
 
-          <div class="case-quote-box">
-            <i data-lucide="quote" class="quote-icon"></i>
-            <p>
-              "Tudo era feito em papel, em cadernos. Agora temos rastreabilidade completa, com registro de usuário, data e horário no sistema. Quando precisamos de relatórios, conseguimos gerá-los em segundos, sem depender de planilhas manuais."
-            </p>
-            <span class="quote-source">— Bárbara Andrade, Chefe do Serviço de Gerenciamento de Amostras Biológicas (Sgab/Funed)</span>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Manifesto Section -->
-    <section class="manifesto-section" id="sobre">
-      <div class="container">
-        <div class="manifesto-card glass-panel">
-          <div class="manifesto-quote-mark">“</div>
-          <p class="manifesto-text">
-            Acredito na sinergia entre <strong>governança, tecnologia e processos de alta criticidade</strong> para acelerar entregas, garantir a estabilidade operacional e gerar impacto real na saúde digital.
+
+    <!-- 2. FAIXA DE AUTORIDADE (A Solução em Números) -->
+    <section class="py-16 bg-white text-slate-900 relative z-20 shadow-lg border-y border-slate-200" id="autoridade">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-cyan-600 bg-cyan-50 px-3 py-1 rounded-full border border-cyan-100">
+            A Solução em Números
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-3">
+            Resultados Mensuráveis na Gestão de TI & Saúde
+          </h2>
+          <p class="text-sm text-slate-600 mt-2">
+            Métricas consolidadas em mais de 15 anos de atuação estratégica frente a grandes contas e ecossistemas hospitalares.
           </p>
-          <div class="manifesto-author">
-            <span class="author-name">Eduardo Rodrigues</span>
-            <span class="author-title">Gerente de Projetos Sênior | PMO | HealthTech IT</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Career Experience Timeline -->
-    <section class="experience-section" id="experiencia">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge"><i data-lucide="briefcase"></i> Trajetória Profissional</span>
-          <h2 class="section-title">Experiência Profissional</h2>
-          <p class="section-subtitle">Histórico comprovado em instituições públicas e privadas de grande porte.</p>
         </div>
 
-        <div class="timeline">
-          <!-- Item 1: Pixeon Senior PM -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <div>
-                  <span class="company-badge">PIXEON</span>
-                  <h3 class="role-title">Gerente de Projetos Sênior</h3>
-                </div>
-                <span class="timeline-period">Junho 2016 – Maio 2026 (10 anos)</span>
-              </div>
-              <p class="timeline-desc">
-                Liderança de 188 projetos concluídos com sucesso para 88 clientes no setor de saúde (RIS, LIS, PACS), destravando mais de R$ 1,7 Milhão em faturamento e gerenciando mais de 13.400 horas técnicas.
-              </p>
-              <ul class="timeline-bullets">
-                <li><i data-lucide="check-circle-2"></i> <strong>Gestão de Carteira & Clientes:</strong> Condução de contas estratégicas (FUNED, EBSERH Uberlândia, Laboratório Sanitas, Laboratório Qualidade, Clínica São Marcos).</li>
-                <li><i data-lucide="check-circle-2"></i> <strong>Case FUNED (Lacen-MG):</strong> Redução de 11 dias para 3 dias na liberação de exames (-73% tempo de espera).</li>
-                <li><i data-lucide="check-circle-2"></i> <strong>Governança & Riscos:</strong> Mapeamento preventivo de matrizes de risco, mitigação de impactos e manutenção do alinhamento com executivos C-Level.</li>
-                <li><i data-lucide="check-circle-2"></i> <strong>Geração de Receita:</strong> Ativação de receitas recorrentes mensais (MRR) e faturamento eventual de implantação.</li>
-              </ul>
-              <div class="timeline-skills">
-                <span class="skill-pill">188 Projetos Entregues</span>
-                <span class="skill-pill">88 Clientes Atendidos</span>
-                <span class="skill-pill">+13.400h Executadas</span>
-                <span class="skill-pill">RIS / LIS / PACS</span>
-                <span class="skill-pill">PMO & Governança</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 2: Pixeon Business Consultant -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <div>
-                  <span class="company-badge">PIXEON</span>
-                  <h3 class="role-title">Consultor de Negócios RIS / Analista / Suporte</h3>
-                </div>
-                <span class="timeline-period">Agosto 2012 – Maio 2016 (3 anos 10 meses)</span>
-              </div>
-              <p class="timeline-desc">
-                Atuação estratégica no desenho de soluções de radiologia e interface técnica/consultiva com clientes de diagnóstico por imagem.
-              </p>
-              <ul class="timeline-bullets">
-                <li><i data-lucide="check-circle-2"></i> Mapeamento de requisitos complexos e desenho de soluções customizadas de radiologia (RIS).</li>
-                <li><i data-lucide="check-circle-2"></i> Capacitação técnica e clínica de usuários finais para rápida adoção de sistemas.</li>
-                <li><i data-lucide="check-circle-2"></i> Evolução de Suporte N2 para consultoria técnica de alto valor agregado.</li>
-              </ul>
-              <div class="timeline-skills">
-                <span class="skill-pill">Consultoria Técnica</span>
-                <span class="skill-pill">Desenho de Soluções</span>
-                <span class="skill-pill">Radiologia & RIS</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 3: HP -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <div>
-                  <span class="company-badge hp-badge">HP (HEWLETT-PACKARD)</span>
-                  <h3 class="role-title">Analista de Suporte Enterprise</h3>
-                </div>
-                <span class="timeline-period">Agosto 2008 – Agosto 2012 (4 anos 1 mês)</span>
-              </div>
-              <p class="timeline-desc">
-                Gerenciamento e administração de incidentes em sistemas corporativos de grande porte via Remote Desktop Management.
-              </p>
-              <ul class="timeline-bullets">
-                <li><i data-lucide="check-circle-2"></i> Diagnóstico e resolução de incidentes críticos em ambientes globais multinacionais.</li>
-                <li><i data-lucide="check-circle-2"></i> Garantia de continuidade operacional e cumprimento de SLAs contratuais rígidos.</li>
-              </ul>
-              <div class="timeline-skills">
-                <span class="skill-pill">Enterprise Support</span>
-                <span class="skill-pill">Remote Management</span>
-                <span class="skill-pill">SLA Rigoroso</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Competencies & Skills -->
-    <section class="skills-section" id="competencias">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge"><i data-lucide="sliders"></i> Expertise Técnica & Gestão</span>
-          <h2 class="section-title">Competências & Ferramentas</h2>
-          <p class="section-subtitle">Domínio integrado de metodologias de gerenciamento, sistemas de saúde e inteligência de dados.</p>
-        </div>
-
-        <div class="skills-grid">
+        <!-- Grid Horizontal com 4 Cartões Minimalistas -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="metricas">
+          
           <!-- Card 1 -->
-          <div class="skill-card glass-panel">
-            <div class="skill-card-icon"><i data-lucide="target"></i></div>
-            <h3>Governança & PMO</h3>
-            <ul class="skill-list">
-              <li><span>Gestão de Projetos & Portfólio</span> <span class="badge-mini">188 Projetos</span></li>
-              <li><span>PMBOK & Frameworks de Riscos</span> <span class="badge-mini">Avançado</span></li>
-              <li><span>Metodologias Ágeis (Scrum / Kanban)</span> <span class="badge-mini">Prático</span></li>
-              <li><span>Change Management (Gestão Mudança)</span> <span class="badge-mini">Enterprise</span></li>
-              <li><span>Gestão de Stakeholders Executivos</span> <span class="badge-mini">C-Level</span></li>
-            </ul>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight kpi-number" data-target="188">
+              188
+            </div>
+            <h3 class="text-base font-bold text-slate-800 mt-1">Projetos Entregues</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Implantações completas de RIS, LIS e PACS dentro dos prazos e escopos combinados.
+            </p>
           </div>
 
           <!-- Card 2 -->
-          <div class="skill-card glass-panel">
-            <div class="skill-card-icon"><i data-lucide="heart-pulse"></i></div>
-            <h3>Sistemas de Saúde (HealthTech)</h3>
-            <ul class="skill-list">
-              <li><span>LIS (Laboratory Information System)</span> <span class="badge-mini">Especialista</span></li>
-              <li><span>RIS (Radiology Information System)</span> <span class="badge-mini">Especialista</span></li>
-              <li><span>PACS (Picture Archiving System)</span> <span class="badge-mini">Especialista</span></li>
-              <li><span>Interoperabilidade & DataSUS / GAL</span> <span class="badge-mini">Integrado</span></li>
-              <li><span>Fluxos de Medicina Diagnóstica</span> <span class="badge-mini">Consultivo</span></li>
-            </ul>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="building-2" class="w-6 h-6"></i>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight kpi-number" data-target="88">
+              88
+            </div>
+            <h3 class="text-base font-bold text-slate-800 mt-1">Clientes (Saúde Digital)</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Atendimento direto a laboratórios públicos, hospitais de grande porte e redes privadas.
+            </p>
           </div>
 
           <!-- Card 3 -->
-          <div class="skill-card glass-panel">
-            <div class="skill-card-icon"><i data-lucide="wrench"></i></div>
-            <h3>Ferramentas & Inteligência</h3>
-            <ul class="skill-list">
-              <li><span>Business Intelligence (BI)</span> <span class="badge-mini">Monitoramento</span></li>
-              <li><span>Microsoft Dynamics 365 ERP</span> <span class="badge-mini">Domínio</span></li>
-              <li><span>Salesforce CRM</span> <span class="badge-mini">Operacional</span></li>
-              <li><span>Jira Software & Confluence</span> <span class="badge-mini">Agile</span></li>
-              <li><span>MS Project & Automações NoCode/IA</span> <span class="badge-mini">Projetos</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Academic Background & Certifications -->
-    <section class="education-section" id="formacao">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge"><i data-lucide="graduation-cap"></i> Formação & Desenvolvimento</span>
-          <h2 class="section-title">Formação Acadêmica & Certificações</h2>
-          <p class="section-subtitle">Evolução contínua aliando gestão sólida, ciência de dados e inteligência artificial.</p>
-        </div>
-
-        <div class="education-grid">
-          <!-- Degree Card -->
-          <div class="edu-card glass-panel">
-            <div class="edu-icon"><i data-lucide="book-open"></i></div>
-            <div class="edu-details">
-              <span class="edu-status status-in-progress">Em Andamento</span>
-              <h3>Ciência de Dados e Inteligência Artificial</h3>
-              <p class="edu-institution">UniDomBosco</p>
-              <p class="edu-desc">Análise preditiva, aprendizado de máquina, estruturas de dados e aplicação de IA para eficiência operacional e tomada de decisão.</p>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="dollar-sign" class="w-6 h-6"></i>
             </div>
-          </div>
-
-          <!-- PMP Card -->
-          <div class="edu-card glass-panel">
-            <div class="edu-icon"><i data-lucide="award"></i></div>
-            <div class="edu-details">
-              <span class="edu-status status-prep">Em Preparação</span>
-              <h3>Certificação PMP® (Project Management Professional)</h3>
-              <p class="edu-institution">Project Management Institute (PMI)</p>
-              <p class="edu-desc">Alinhamento às melhores práticas globais de gerenciamento de projetos, abordagens preditivas, ágeis e híbridas.</p>
+            <div class="text-3xl sm:text-4xl font-extrabold font-display text-emerald-600 tracking-tight">
+              R$ 1,7M+
             </div>
-          </div>
-
-          <!-- Certifications List -->
-          <div class="edu-card glass-panel">
-            <div class="edu-icon"><i data-lucide="check-square"></i></div>
-            <div class="edu-details">
-              <span class="edu-status status-completed">Concluídos</span>
-              <h3>Cursos & Especializações</h3>
-              <ul class="edu-cert-list">
-                <li><i data-lucide="check-circle-2"></i> <strong>Gestão de Projetos:</strong> Veduca</li>
-                <li><i data-lucide="check-circle-2"></i> <strong>Customer Success:</strong> Sebrae</li>
-                <li><i data-lucide="check-circle-2"></i> <strong>Sistemas de Saúde:</strong> Treinamentos Especializados RIS / LIS / PACS</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact & Footer Section -->
-    <section class="contact-section" id="contato">
-      <div class="container">
-        <div class="contact-card glass-panel">
-          <div class="contact-content">
-            <span class="section-badge"><i data-lucide="send"></i> Conectar</span>
-            <h2 class="contact-title">Pronto para liderar seu próximo projeto de alto impacto?</h2>
-            <p class="contact-desc">
-              Entre em contato direto para conversar sobre oportunidades de liderança de projetos, estruturação de PMO ou transformação digital em saúde e TI.
+            <h3 class="text-base font-bold text-slate-800 mt-1">Faturamento Destravado</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Receita eventual e faturamento retido liberados através da conclusão de projetos paralisados.
             </p>
+          </div>
 
-            <div class="contact-buttons-row">
-              <a href="https://wa.me/5511985344770?text=Olá%20Eduardo,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                <i data-lucide="message-square"></i>
-                Conversar no WhatsApp: (11) 98534-4770
-              </a>
-              <a href="mailto:eduardobr83@icloud.com" class="btn btn-outline btn-lg">
-                <i data-lucide="mail"></i>
-                Enviar E-mail
-              </a>
-              <a href="https://www.linkedin.com/in/eduardo-rodrigues-48154525" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg">
-                <i data-lucide="linkedin"></i>
-                Perfil LinkedIn
-              </a>
+          <!-- Card 4 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="clock" class="w-6 h-6"></i>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight">
+              13.400h+
+            </div>
+            <h3 class="text-base font-bold text-slate-800 mt-1">de Execução Técnica</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Horas de liderança direta de equipes multidisciplinares, governança e operação assistida.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 3. A PROVA REAL (Case de Destaque - FUNED) -->
+    <section class="py-20 bg-slate-950 text-white relative overflow-hidden" id="case-funed">
+      <!-- Glow Decor -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="max-w-3xl mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/60 text-xs font-semibold mb-4">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            <span>Case de Impacto em Saúde Pública</span>
+          </div>
+          
+          <!-- Título Exato -->
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-white leading-tight">
+            A Prova Real: Como aceleramos a Saúde Pública em Minas Gerais (Lacen-MG).
+          </h2>
+          
+          <!-- Texto Exato -->
+          <p class="text-base sm:text-lg text-slate-300 mt-4 leading-relaxed font-normal">
+            A implantação do LIS Korus destravou R$ 149k de receita e R$ 26k/mês de MRR.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Elemento Visual: Barras Horizontais / Infográfico Comparativo -->
+          <div class="lg:col-span-7 bg-brand-cardDark border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
+              <div>
+                <h3 class="text-lg font-bold text-white">Tempo de Emissão de Laudos de Exames</h3>
+                <p class="text-xs text-slate-400">Comparativo operacional no Laboratório Central de Saúde Pública (Lacen-MG / FUNED)</p>
+              </div>
+              
+              <!-- Selo em Destaque (-73%) -->
+              <div class="flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 animate-pulse shadow-lg shadow-emerald-950/50">
+                <i data-lucide="trending-down" class="w-5 h-5"></i>
+                <span class="text-sm font-extrabold font-display tracking-tight">-73% no tempo de laudos</span>
+              </div>
+            </div>
+
+            <div class="space-y-8">
+              
+              <!-- Barra Antes -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center text-xs font-semibold">
+                  <span class="text-rose-400 flex items-center gap-1.5">
+                    <i data-lucide="alert-triangle" class="w-4 h-4"></i> Cenário Anterior (Processo Manual / Fragmentado)
+                  </span>
+                  <span class="text-rose-400 font-bold text-sm">11 Dias (259h)</span>
+                </div>
+                <div class="w-full h-7 bg-slate-900 rounded-full overflow-hidden p-1 border border-slate-800">
+                  <div class="h-full bg-gradient-to-r from-rose-600 to-rose-500 rounded-full w-full flex items-center justify-end pr-3 transition-all duration-1000" style="width: 100%;">
+                    <span class="text-[10px] text-white font-extrabold font-mono uppercase tracking-wider">Antes: 11 Dias</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Barra Depois -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center text-xs font-semibold">
+                  <span class="text-emerald-400 flex items-center gap-1.5">
+                    <i data-lucide="check-circle" class="w-4 h-4"></i> Pós Implantação LIS Korus (Governança & Automação)
+                  </span>
+                  <span class="text-emerald-400 font-bold text-sm">3 Dias (70h)</span>
+                </div>
+                <div class="w-full h-7 bg-slate-900 rounded-full overflow-hidden p-1 border border-slate-800">
+                  <div class="h-full bg-gradient-to-r from-emerald-500 to-cyan-400 rounded-full flex items-center justify-end pr-3 transition-all duration-1000 shadow-lg shadow-emerald-500/20" style="width: 27%;">
+                    <span class="text-[10px] text-slate-950 font-extrabold font-mono uppercase tracking-wider">Depois: 3 Dias</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Informações adicionais do case -->
+            <div class="mt-8 pt-6 border-t border-slate-800/80 grid grid-cols-2 gap-4 text-xs">
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                <p class="text-slate-400 text-[10px]">Aumento de Produtividade</p>
+                <p class="text-white font-bold mt-0.5 text-sm">+270% de Agilidade</p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                <p class="text-slate-400 text-[10px]">Rastreabilidade & Compliance</p>
+                <p class="text-emerald-400 font-bold mt-0.5 text-sm">100% Auditável</p>
+              </div>
             </div>
           </div>
+
+          <!-- Métricas Financeiras & Impacto de Negócio Right -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <div class="p-6 rounded-3xl bg-brand-cardDark border border-slate-800 space-y-4 hover:border-emerald-500/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <i data-lucide="banknote" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl font-extrabold font-display text-emerald-400">R$ 149.000</span>
+                <h3 class="text-sm font-bold text-white mt-1">Faturamento Eventual Destravado</h3>
+                <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                  Conclusão da entrega do sistema Korus no Lacen-MG, liberando o pagamento retido do contrato público.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-brand-cardDark border border-slate-800 space-y-4 hover:border-cyan-500/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                <i data-lucide="repeat" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl font-extrabold font-display text-cyan-400">R$ 26.000/mês</span>
+                <h3 class="text-sm font-bold text-white mt-1">Nova Receita Recorrente (MRR)</h3>
+                <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                  Garantia de receita mensal continuada em contrato de sustentação e operação assistida.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-xs text-slate-300 flex items-start gap-3">
+              <i data-lucide="info" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <p class="leading-relaxed">
+                Este projeto foi divisor de águas para a modernização diagnóstica da saúde estadual em Minas Gerais, integrando amostras, bancadas laboratoriais e expedição digital de laudos.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 4. METODOLOGIAS & STACK TECNOLÓGICA (Os Bastidores) -->
+    <section class="py-20 bg-brand-lightBg text-slate-900 border-t border-slate-200" id="stack">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Os Bastidores
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-3">
+            Metodologias & Stack Tecnológica
+          </h2>
+          <p class="text-sm text-slate-600 mt-2">
+            A combinação de forte governança de processos com proficiência técnica em arquiteturas de software e infraestrutura de TI.
+          </p>
+        </div>
+
+        <!-- Dois Blocos Agrupados -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- Bloco 1: Governança -->
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center">
+                <i data-lucide="target" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold font-display text-slate-900">Governança & Gestão de Projetos</h3>
+                <p class="text-xs text-slate-500">Frameworks ágeis e controle de qualidade operacional</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                  ÁGIL
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">Gestão Ágil</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Iterações rápidas, sprints focadas em valor e entregas contínuas.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-cyan-100 text-cyan-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                  SCR
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">Scrum</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Daily meetings, refinamento de backlog e alinhamento constante.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                  KAN
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">Kanban</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Gestão visual de fluxo, limitação de WIP e eliminação de gargalos.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                  PMO
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">PMO & Governança</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Padronização de processos, gestão de riscos e alocação de recursos.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3 sm:col-span-2">
+                <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                  SLA
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">SLAs & Matriz de Escalamento</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Cumprimento rigoroso de prazos contratuais e acordos de nível de serviço em ambientes críticos de saúde.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bloco 2: Tecnologia -->
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+              <div class="w-12 h-12 rounded-2xl bg-cyan-50 border border-cyan-100 text-cyan-600 flex items-center justify-center">
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold font-display text-slate-900">Tecnologia & Infraestrutura</h3>
+                <p class="text-xs text-slate-500">Compreensão técnica profunda para liderar times de engenharia</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-slate-200 text-slate-800 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="terminal" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">Linux</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Administração e diagnóstico de servidores corporativos.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="box" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">Docker</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Containers, implantações isoladas e microserviços.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center shrink-0 mt-0.5 font-mono text-xs font-bold">
+                  N
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">Next.js</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Aplicações web modernas, SSR e alta performance.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="database" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">PostgreSQL</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Modelagem relacional, otimização de queries SQL e dados.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3 sm:col-span-2">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="activity" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-800">Redes & Troubleshooting N3</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Diagnóstico avançado de conectividade, protocolos de comunicação médica (DICOM/HL7) e resolução de incidentes críticos.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 5. RODAPÉ & CALL TO ACTION (Contato e Currículo ATS) -->
+    <section class="py-20 bg-brand-dark text-white relative border-t border-slate-800" id="contato">
+      <!-- Glow Background -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 text-xs font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          <span>Disponível para Oportunidades Sênior & Consultoria PMO</span>
+        </div>
+
+        <!-- Título Exato -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+          Pronto para escalar a eficiência da sua operação?
+        </h2>
+
+        <p class="text-base sm:text-lg text-slate-300 mt-4 max-w-2xl mx-auto leading-relaxed">
+          Vamos conversar sobre como alinhar governança de projetos, prazos previsíveis e tecnologia de ponta na sua instituição.
+        </p>
+
+        <!-- Informações de Contato Exatas -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-semibold text-slate-200">
+          <a href="mailto:eduardobr83@icloud.com" class="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 hover:text-cyan-400 transition-all">
+            <i data-lucide="mail" class="w-5 h-5 text-cyan-400"></i>
+            <span>eduardobr83@icloud.com</span>
+          </a>
+
+          <a href="https://wa.me/5511985344770?text=Ol%C3%A1%20Eduardo,%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade%20de%20gest%C3%A3o%20de%20projetos." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:text-emerald-400 transition-all">
+            <i data-lucide="phone" class="w-5 h-5 text-emerald-400"></i>
+            <span>(11) 98534-4770</span>
+          </a>
+        </div>
+
+        <!-- Botão de Destaque (Baixar Currículo Versão ATS com link do Google Docs PDF) -->
+        <div class="mt-10 pt-4">
+          <a href="https://docs.google.com/document/d/1XvKBmAOvLjNa6W55KRVoHwH0aIx55dedJRvbCkEQSeg/export?format=pdf" 
+             target="_blank" rel="noopener noreferrer" 
+             class="inline-flex items-center justify-center gap-3 px-9 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-extrabold text-base tracking-wide shadow-2xl shadow-cyan-900/40 hover:shadow-cyan-500/30 transform hover:-translate-y-1 transition-all group">
+            <i data-lucide="file-text" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+            <span>Baixar Currículo (Versão ATS)</span>
+            <i data-lucide="download" class="w-5 h-5 text-cyan-200"></i>
+          </a>
+          <p class="text-xs text-slate-500 mt-3 font-mono">
+            Formatado para leitura otimizada por sistemas ATS de recrutamento (PDF direto)
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-8 border-t border-slate-800/80 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; <span id="currentYear"></span> Eduardo Rodrigues. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-6 font-medium">
+          <a href="https://www.linkedin.com/in/eduardo-rodrigues-48154525" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
+          <a href="https://wa.me/5511985344770" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">WhatsApp</a>
+          <a href="mailto:eduardobr83@icloud.com" class="hover:text-cyan-400 transition-colors">E-mail</a>
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="container footer-container">
-      <p>© <span id="currentYear"></span> Eduardo Rodrigues. Todos os direitos reservados.</p>
-      <div class="footer-links">
-        <a href="https://github.com/eduardobrodrigues83/PortfolioEduardoRodrigues" target="_blank" rel="noopener noreferrer">
-          <i data-lucide="github"></i> Repositório GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/eduardo-rodrigues-48154525" target="_blank" rel="noopener noreferrer">
-          <i data-lucide="linkedin"></i> LinkedIn
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Modal View for CV -->
-  <div class="modal-overlay" id="cvModal" aria-hidden="true">
-    <div class="modal-container glass-panel">
-      <div class="modal-header">
-        <h2><i data-lucide="file-text"></i> Currículo Executivo - Eduardo Rodrigues</h2>
-        <button class="modal-close" id="closeCvModalBtn" aria-label="Fechar Modal">
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="cv-summary-box">
-          <div class="cv-profile-header">
-            <h3>Eduardo Rodrigues</h3>
-            <p>Gerente de Projetos Sênior | PMO | HealthTech IT</p>
-            <p class="cv-contact-line">📱 (11) 98534-4770 | ✉️ eduardobr83@icloud.com | 📍 São Bernardo do Campo, SP</p>
-          </div>
-          <hr class="cv-divider">
-          <h4>Resumo Executivo</h4>
-          <p>
-            Profissional com mais de 15 anos de experiência em tecnologia e gerenciamento de projetos de implantação de sistemas de saúde (RIS, LIS e PACS). Histórico comprovado de 188 projetos concluídos com sucesso para 88 clientes, gerando mais de R$ 1,7 Milhão em receita de implantação e mais de 13.400 horas técnicas de execução. Responsável por cases reais de alta visibilidade nacional, como a FUNED/Lacen-MG (-73% no tempo de laudos).
-          </p>
-
-          <h4>Destaques de Impacto Quantificável</h4>
-          <p>• <strong>188 Projetos Concluídos</strong> para 88 clientes do setor público e privado de saúde.</p>
-          <p>• <strong>+R$ 1,7 Milhão</strong> em faturamento eventual destravado e aceleração de faturamento recorrente (MRR).</p>
-          <p>• <strong>+13.400 Horas Técnicas</strong> planejadas e executadas em operação assistida.</p>
-          <p>• <strong>FUNED (Lacen-MG):</strong> Redução de 11 dias para 3 dias na liberação de exames laboratoriais.</p>
-
-          <h4>Histórico Profissional</h4>
-          <div class="cv-item">
-            <strong>PIXEON — Gerente de Projetos Sênior (Junho 2016 – Maio 2026)</strong>
-            <p>Liderança de 188 projetos enterprise. Contas: FUNED, EBSERH Uberlândia, Sanitas, Qualidade, São Marcos.</p>
-          </div>
-          <div class="cv-item">
-            <strong>PIXEON — Consultor de Negócios / Analista (Agosto 2012 – Maio 2016)</strong>
-            <p>Mapeamento de requisitos de radiologia, consultoria consultiva e capacitação técnica.</p>
-          </div>
-          <div class="cv-item">
-            <strong>HP — Analista de Suporte Enterprise (Agosto 2008 – Agosto 2012)</strong>
-            <p>Suporte remoto e resolução de incidentes críticos em ambiente multinacional.</p>
-          </div>
-
-          <h4>Formação & Certificações</h4>
-          <p>• Bacharelado em Ciência de Dados e IA (UniDomBosco) — Em andamento</p>
-          <p>• Certificação PMP® (Project Management Institute) — Em preparação</p>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="https://wa.me/5511985344770?text=Olá%20Eduardo,%20gostaria%20de%20receber%20seu%20currículo%20em%20PDF." target="_blank" class="btn btn-primary">
-          <i data-lucide="send"></i> Solicitar PDF via WhatsApp
-        </a>
-        <button class="btn btn-outline" id="closeCvModalFooterBtn">Fechar</button>
-      </div>
-    </div>
-  </div>
-
   <!-- Toast Notification -->
-  <div class="toast" id="toast">
-    <i data-lucide="check-circle" class="toast-icon"></i>
-    <span id="toastMsg">E-mail copiado com sucesso!</span>
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-slate-900 text-white border border-slate-700 shadow-2xl text-xs font-semibold">
+      <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+      <span id="toastMsg">E-mail copiado para a área de transferência!</span>
+    </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

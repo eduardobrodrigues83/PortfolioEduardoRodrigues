@@ -1,55 +1,61 @@
-// Initialize Lucide Icons
+// Main Application JavaScript
 document.addEventListener('DOMContentLoaded', () => {
+  // 1. Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }
 
-  // Current Year in Footer
+  // 2. Set Current Year in Footer
   const yearEl = document.getElementById('currentYear');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Sticky Navbar Scroll Effect
+  // 3. Navbar Sticky & Scroll Effects
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  }
 
-  // Mobile Menu Toggle
+  // 4. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const navLinks = document.getElementById('navLinks');
 
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      navLinks.classList.toggle('hidden');
     });
 
-    // Close mobile menu on nav link click
-    document.querySelectorAll('.nav-link').forEach(link => {
+    // Close menu when a link inside is clicked
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        navLinks.classList.add('hidden');
       });
     });
   }
 
-  // Copy Email to Clipboard
+  // 5. Copy Email to Clipboard with Toast Notification
   const copyEmailBtn = document.getElementById('copyEmailBtn');
   const toast = document.getElementById('toast');
   const toastMsg = document.getElementById('toastMsg');
 
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
-      const email = copyEmailBtn.getAttribute('data-email');
-      navigator.clipboard.writeText(email).then(() => {
-        showToast(`E-mail ${email} copiado!`);
-      }).catch(() => {
+      const email = copyEmailBtn.getAttribute('data-email') || 'eduardobr83@icloud.com';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email)
+          .then(() => showToast(`E-mail ${email} copiado!`))
+          .catch(() => showToast(`E-mail: ${email}`));
+      } else {
         showToast(`E-mail: ${email}`);
-      });
+      }
     });
   }
 
@@ -59,44 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.classList.add('show');
     setTimeout(() => {
       toast.classList.remove('show');
-    }, 3000);
+    }, 3500);
   }
 
-  // CV Modal Handlers
-  const openCvModalBtn = document.getElementById('openCvModalBtn');
-  const closeCvModalBtn = document.getElementById('closeCvModalBtn');
-  const closeCvModalFooterBtn = document.getElementById('closeCvModalFooterBtn');
-  const cvModal = document.getElementById('cvModal');
-
-  function openModal() {
-    if (cvModal) {
-      cvModal.classList.add('active');
-      cvModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeModal() {
-    if (cvModal) {
-      cvModal.classList.remove('active');
-      cvModal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-  }
-
-  if (openCvModalBtn) openCvModalBtn.addEventListener('click', openModal);
-  if (closeCvModalBtn) closeCvModalBtn.addEventListener('click', closeModal);
-  if (closeCvModalFooterBtn) closeCvModalFooterBtn.addEventListener('click', closeModal);
-
-  if (cvModal) {
-    cvModal.addEventListener('click', (e) => {
-      if (e.target === cvModal) {
-        closeModal();
-      }
-    });
-  }
-
-  // KPI Counter Animation
+  // 6. KPI Counter Animation (Faixa de Autoridade)
   const kpiNumbers = document.querySelectorAll('.kpi-number[data-target]');
   let animated = false;
 
@@ -105,25 +77,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!kpiSection || animated) return;
 
     const rect = kpiSection.getBoundingClientRect();
-    if (rect.top <= window.innerHeight * 0.8) {
+    if (rect.top <= window.innerHeight * 0.85) {
       animated = true;
       kpiNumbers.forEach(num => {
         const target = parseInt(num.getAttribute('data-target'), 10);
+        if (isNaN(target)) return;
+        
         let count = 0;
-        const speed = Math.ceil(target / 30);
+        const duration = 1200; // ms
+        const steps = 30;
+        const stepTime = duration / steps;
+        const increment = Math.ceil(target / steps);
+
         const timer = setInterval(() => {
-          count += speed;
+          count += increment;
           if (count >= target) {
-            num.textContent = `+${target}`;
+            num.textContent = `${target}`;
             clearInterval(timer);
           } else {
-            num.textContent = `+${count}`;
+            num.textContent = `${count}`;
           }
-        }, 40);
+        }, stepTime);
       });
     }
   }
 
   window.addEventListener('scroll', animateCounters);
-  animateCounters(); // Initial check
+  animateCounters(); // Trigger on load if already in viewport
 });
