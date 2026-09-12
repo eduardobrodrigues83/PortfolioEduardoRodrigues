@@ -72,7 +72,13 @@
         <a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a>
       </nav>
 
-      <div class="hidden sm:flex items-center gap-4">
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="/curriculo_ats.html" 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs uppercase tracking-wider transition-all border border-slate-700 hover:border-cyan-400">
+          <i data-lucide="file-text" class="w-4 h-4 text-cyan-400"></i>
+          <span>Baixar CV</span>
+        </a>
         <a href="https://wa.me/5511985344770?text=Ol%C3%A1%20Eduardo,%20analisei%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." 
            target="_blank" rel="noopener noreferrer" 
            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-900/30 hover:shadow-emerald-700/40">
@@ -95,12 +101,20 @@
       <a href="#stack" class="block py-2 hover:text-cyan-400">Metodologias & Ferramentas</a>
       <a href="#formacao" class="block py-2 hover:text-cyan-400">Formação & PMP</a>
       <a href="#contato" class="block py-2 hover:text-cyan-400">Contato</a>
-      <a href="https://wa.me/5511985344770?text=Ol%C3%A1%20Eduardo,%20analisei%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." 
-         target="_blank" rel="noopener noreferrer" 
-         class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-600 text-white font-semibold text-xs uppercase tracking-wider">
-        <i data-lucide="message-square" class="w-4 h-4"></i>
-        <span>Falar no WhatsApp</span>
-      </a>
+      <div class="pt-2 space-y-2">
+        <a href="/curriculo_ats.html" 
+           target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-800 text-white border border-slate-700 font-semibold text-xs uppercase tracking-wider">
+          <i data-lucide="file-text" class="w-4 h-4 text-cyan-400"></i>
+          <span>Baixar Currículo (PDF)</span>
+        </a>
+        <a href="https://wa.me/5511985344770?text=Ol%C3%A1%20Eduardo,%20analisei%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." 
+           target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-600 text-white font-semibold text-xs uppercase tracking-wider">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -128,10 +142,15 @@
               Transformando cenários complexos em <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400">entregas previsíveis de TI</span>.
             </h1>
 
-            <!-- Subtítulo -->
-            <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
-              Ajudo empresas a executarem projetos críticos de tecnologia com segurança e previsibilidade. Em 18 anos de trajetória em TI — sendo a última década dedicada exclusivamente à gestão de projetos —, orquestrei mais de 13.400 horas de implantações em ambientes de alta complexidade e exigência, como o setor de Saúde Digital. Atuo como um facilitador, combinando minha base técnica com uma gestão próxima para conectar as necessidades de negócio aos times de engenharia. Acredito que excelentes resultados — como os <strong class="font-bold text-white">+R$ 1,7 Milhão</strong> destravados em <strong class="font-bold text-white">188 entregas</strong> — são frutos de comunicação clara, processos ágeis e parceiros de confiança.
-            </p>
+            <!-- Subtítulo / Apresentação -->
+            <div class="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
+              <p>
+                Ajudo empresas a executarem projetos críticos de tecnologia com segurança, velocidade e previsibilidade. Com <strong class="font-bold text-white">18 anos de trajetória em TI</strong> — sendo a última década dedicada exclusivamente à gestão de projetos —, orquestrei mais de <strong class="font-bold text-white">13.400 horas de implantações</strong> em cenários de alta complexidade e exigência, como o setor de Saúde Digital.
+              </p>
+              <p>
+                Atuo como um facilitador estratégico, combinando minha base técnica com uma gestão próxima para conectar as necessidades de negócio aos times de engenharia. Acredito que excelentes resultados — como os <strong class="font-bold text-emerald-400">+R$ 1,7 Milhão</strong> destravados em <strong class="font-bold text-cyan-400">188 entregas</strong> — são frutos de comunicação clara, processos ágeis e parceiros de confiança.
+              </p>
+            </div>
 
             <!-- Botões de Ação -->
             <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
@@ -749,18 +768,15 @@
           </a>
         </div>
 
-        <!-- Botão de Destaque (Baixar Currículo Versão ATS) -->
+        <!-- Botão de Destaque (Baixar Currículo Profissional) -->
         <div class="mt-10 pt-4">
           <a href="/curriculo_ats.html" 
              target="_blank" rel="noopener noreferrer" 
              class="inline-flex items-center justify-center gap-3 px-9 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-extrabold text-base tracking-wide shadow-2xl shadow-cyan-900/40 hover:shadow-cyan-500/30 transform hover:-translate-y-1 transition-all group">
             <i data-lucide="file-text" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
-            <span>Baixar Currículo (Versão ATS)</span>
+            <span>Baixar Currículo Profissional</span>
             <i data-lucide="download" class="w-5 h-5 text-cyan-200"></i>
           </a>
-          <p class="text-xs text-slate-500 mt-3 font-mono">
-            Formatado para leitura otimizada por sistemas ATS de recrutamento (PDF direto)
-          </p>
         </div>
 
       </div>
