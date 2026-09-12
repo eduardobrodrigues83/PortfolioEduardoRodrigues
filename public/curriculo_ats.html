@@ -2,153 +2,276 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo ATS - Eduardo Bezerra Rodrigues</title>
   <style>
     @page {
       size: A4;
-      margin: 1.0cm 1.27cm 1.0cm 1.27cm;
+      margin: 1.2cm 1.5cm 1.2cm 1.5cm;
+    }
+    * {
+      box-sizing: border-box;
     }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 9.5pt;
-      line-height: 1.25;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 10pt;
+      line-height: 1.35;
       color: #111111;
-      margin: 0;
-      padding: 0;
+      margin: 0 auto;
+      padding: 20px 15px;
       background: #ffffff;
+      max-width: 800px;
     }
-    h1 {
-      font-size: 14pt;
+    
+    /* Dynamic web control bar (hidden on print) */
+    .no-print {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .no-print .info-title {
+      font-weight: 600;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .no-print button {
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .no-print button:hover {
+      background: #0369a1;
+    }
+
+    /* Resume Header */
+    .header {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .header h1 {
+      font-size: 16pt;
       font-weight: bold;
       text-transform: uppercase;
-      margin: 0 0 2px 0;
+      margin: 0 0 4px 0;
       color: #000000;
-      text-align: center;
       letter-spacing: 0.5px;
     }
-    .contact-info {
-      text-align: center;
-      font-size: 8.5pt;
-      color: #333333;
-      margin-bottom: 2px;
-    }
-    .role-title {
-      text-align: center;
-      font-size: 10pt;
-      font-weight: bold;
-      color: #222222;
-      margin-bottom: 6px;
-    }
-    h2 {
+    .header .contact-info {
       font-size: 9.5pt;
+      color: #222222;
+      margin-bottom: 3px;
+    }
+    .header .linkedin-link {
+      font-size: 9.5pt;
+      color: #0056b3;
+      text-decoration: none;
+    }
+    .header .linkedin-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Headers */
+    h2 {
+      font-size: 11pt;
       font-weight: bold;
       text-transform: uppercase;
-      color: #000000;
-      margin: 6px 0 3px 0;
-      letter-spacing: 0.4px;
-      border-bottom: 1px solid #333333;
-      padding-bottom: 1px;
+      color: #1a365d;
+      margin: 14px 0 4px 0;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid #2b4c7e;
+      letter-spacing: 0.5px;
+      page-break-after: avoid;
     }
+
+    /* General Paragraph & Lists */
     p {
-      margin: 0 0 4px 0;
+      margin: 4px 0 6px 0;
       text-align: justify;
     }
     ul {
-      margin: 0 0 4px 0;
-      padding-left: 14px;
+      margin: 3px 0 6px 0;
+      padding-left: 18px;
     }
     li {
-      margin-bottom: 2px;
+      margin-bottom: 3px;
+      text-align: justify;
     }
     strong {
       color: #000000;
     }
-    .job-title-row {
+
+    /* Flex row for left/right alignment (Jobs, Education, Projects) */
+    .flex-row {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
       font-weight: bold;
       color: #000000;
-      margin-top: 4px;
-    }
-    .job-sub {
-      font-style: italic;
-      color: #444444;
-      font-size: 8.5pt;
+      margin-top: 6px;
       margin-bottom: 2px;
     }
-    .compact-grid {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
+    .flex-row .title-left {
+      text-align: left;
     }
-    .compact-grid div {
-      flex: 1;
+    .flex-row .date-right {
+      text-align: right;
+      white-space: nowrap;
+      font-weight: normal;
+      color: #333333;
+    }
+
+    .sub-info {
+      font-style: italic;
+      color: #444444;
+      font-size: 9pt;
+      margin-bottom: 3px;
+    }
+
+    /* Print styles */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        max-width: 100% !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+      }
+      h2 {
+        border-bottom-color: #111111 !important;
+        color: #000000 !important;
+      }
+      .header .linkedin-link {
+        color: #000000 !important;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>EDUARDO BEZERRA RODRIGUES</h1>
-  <div class="contact-info">
-    São Bernardo do Campo, SP &nbsp;|&nbsp; eduardobr83@icloud.com &nbsp;|&nbsp; (11) 98534-4770 &nbsp;|&nbsp; linkedin.com/in/eduardo-rodrigues-48154525
-  </div>
-  <div class="role-title">
-    Gerente de Projetos de TI &nbsp;|&nbsp; PMO &nbsp;|&nbsp; Operações e Suporte Técnico
+  <!-- Web Control Toolbar -->
+  <div class="no-print">
+    <div class="info-title">
+      <span>📄 <strong>Modelo de Currículo Otimizado para ATS</strong></span>
+    </div>
+    <button onclick="window.print()">
+      🖨️ Imprimir / Salvar em PDF
+    </button>
   </div>
 
-  <h2>RESUMO PROFISSIONAL</h2>
+  <!-- Header Centralizado -->
+  <div class="header">
+    <h1>EDUARDO BEZERRA RODRIGUES</h1>
+    <div class="contact-info">
+      São Bernardo do Campo, SP &nbsp;|&nbsp; +55 (11) 98534-4770 &nbsp;|&nbsp; eduardobr83@icloud.com
+    </div>
+    <div>
+      <a href="https://www.linkedin.com/in/eduardo-rodrigues-48154525" target="_blank" rel="noopener noreferrer" class="linkedin-link">https://www.linkedin.com/in/eduardo-rodrigues-48154525</a>
+    </div>
+  </div>
+
+  <!-- OBJETIVO -->
+  <h2>OBJETIVO</h2>
+  <p>
+    <strong>Cargo Alvo:</strong> Gerente de Projetos de TI | PMO | Operações e Suporte Técnico
+  </p>
   <p>
     Ajudo empresas a executarem projetos críticos de tecnologia com segurança e previsibilidade. Em 18 anos de trajetória em TI — sendo a última década dedicada exclusivamente à gestão de projetos —, orquestrei mais de 13.400 horas de implantações em ambientes de alta complexidade. Atuo como facilitador, conectando necessidades de negócio aos times de engenharia. Histórico de 188 entregas para 88 clientes, destravando +R$ 1,7 Milhão em faturamento com foco em governança (Scrum, Kanban, PMP em andamento).
   </p>
 
+  <!-- FORMAÇÃO ACADÊMICA -->
+  <h2>FORMAÇÃO ACADÊMICA</h2>
+  <div class="flex-row">
+    <span class="title-left">BACHARELADO EM CIÊNCIA DE DADOS E INTELIGÊNCIA ARTIFICIAL</span>
+    <span class="date-right"><strong>Cursando</strong></span>
+  </div>
+  <div class="sub-info">UniDomBosco (Previsão de término: 2026)</div>
+
+  <!-- EXPERIÊNCIA PROFISSIONAL -->
   <h2>EXPERIÊNCIA PROFISSIONAL</h2>
 
-  <div class="job-title-row">
-    <span>PIXEON &nbsp;|&nbsp; Gerente de Projetos Sênior</span>
-    <span>Junho 2016 – Maio 2026</span>
+  <div class="flex-row">
+    <span class="title-left">Gerente de Projetos Sênior | Pixeon</span>
+    <span class="date-right">Jun/2016 – Mai/2026</span>
   </div>
-  <div class="job-sub">Liderança simultânea de múltiplos projetos públicos e privados de implantação de sistemas de saúde (RIS, LIS, PACS).</div>
+  <div class="sub-info">Liderança simultânea de múltiplos projetos públicos e privados de implantação de sistemas de saúde (RIS, LIS, PACS).</div>
   <ul>
     <li>Gerenciei stakeholders executivos e equipes multidisciplinares em mais de 20 projetos simultâneos, assegurando estabilidade operacional, conformidade com SLAs e aceleração do go-live.</li>
     <li>Coordenei implantações de sistemas RIS, LIS e PACS em instituições públicas e privadas, mitigando riscos em ambientes críticos.</li>
     <li>Otimizei recursos e cronogramas de implantação, acelerando entregas em ambientes laboratoriais e de diagnóstico por imagem.</li>
   </ul>
 
-  <div class="job-title-row">
-    <span>PIXEON &nbsp;|&nbsp; Consultor de Negócios / Analista / Suporte</span>
-    <span>Agosto 2012 – Maio 2016</span>
+  <div class="flex-row">
+    <span class="title-left">Consultor de Negócios / Analista / Suporte | Pixeon</span>
+    <span class="date-right">Ago/2012 – Mai/2016</span>
   </div>
-  <div class="job-sub">Atuação estratégica no desenho de soluções e na interface técnica e consultiva com clientes de diagnóstico por imagem.</div>
+  <div class="sub-info">Atuação estratégica no desenho de soluções e na interface técnica e consultiva com clientes de diagnóstico por imagem.</div>
   <ul>
     <li>Mapeei requisitos complexos e desenhei soluções customizadas de radiologia e diagnósticos.</li>
-    <li>Lidereu a capacitação técnica e clínica de usuários para adoção de novos sistemas e evoluí do suporte N2 para consultoria técnica.</li>
+    <li>Liderei a capacitação técnica e clínica de usuários para adoção de novos sistemas e evoluí do suporte N2 para consultoria técnica.</li>
   </ul>
 
-  <div class="job-title-row">
-    <span>HP (HEWLETT-PACKARD) &nbsp;|&nbsp; Analista de Suporte</span>
-    <span>Agosto 2008 – Agosto 2012</span>
+  <div class="flex-row">
+    <span class="title-left">Analista de Suporte | HP (Hewlett-Packard)</span>
+    <span class="date-right">Ago/2008 – Ago/2012</span>
   </div>
   <ul>
     <li>Administrei sistemas corporativos críticos de grande porte (enterprise) e atuei na resolução de incidentes complexos via Remote Desktop.</li>
   </ul>
 
-  <h2>CASOS DE SUCESSO & IMPACTO GLOBAL</h2>
+  <!-- CURSOS E CERTIFICAÇÕES -->
+  <h2>CURSOS E CERTIFICAÇÕES</h2>
   <ul>
-    <li><strong>Laboratório Público Central (23 Meses | 1.215h):</strong> 1ª integração do LIS ao Ministério da Saúde do Brasil (-73% no tempo de laudos: 11 para 3 dias). Receita: + de R$ 145k + MRR + de R$ 25k/mês.</li>
+    <li><strong>Certificação PMP® (Project Management Professional)</strong> — PMI (Em preparação / Previsão: 2026)</li>
+    <li><strong>Gestão de Projetos</strong> — Veduca</li>
+    <li><strong>Customer Success</strong> — Sebrae</li>
+  </ul>
+
+  <!-- CASOS DE SUCESSO & PROJETOS DE DESTAQUE -->
+  <h2>CASOS DE SUCESSO &amp; PROJETOS DE DESTAQUE</h2>
+  <ul>
+    <li><strong>Laboratório Público Central (23 Meses | 1.215h):</strong> 1ª integração do LIS ao Ministério da Saúde do Brasil (-73% no tempo de laudos: 11 para 3 dias). Receita liberada: + de R$ 145k + MRR + de R$ 25k/mês.</li>
     <li><strong>Hospital Universitário Público (15 Meses | 828h):</strong> 3 projetos em ambiente de alta complexidade. Receita liberada: + de R$ 125k.</li>
-    <li><strong>Laboratório Privado (25 Meses | 703h):</strong> 7 projetos com fidelização e upsell. Receita: + de R$ 113k eventual + MRR + de R$ 22k/mês recorrente.</li>
+    <li><strong>Laboratório Privado (25 Meses | 703h):</strong> 7 projetos com fidelização e upsell. Receita: + de R$ 113k eventual + MRR + de R$ 22k/mês recursivo.</li>
   </ul>
 
-  <h2>COMPETÊNCIAS</h2>
+  <!-- HABILIDADES TÉCNICAS (TECH SKILLS) -->
+  <h2>HABILIDADES TÉCNICAS (TECH SKILLS)</h2>
   <ul>
-    <li><strong>Gestão e Governança:</strong> Gestão de Projetos (Ágil, Scrum, Kanban, Scrumban), Operações de TI e PMO, Escopo, SLAs, Cronograma, Negociação.</li>
-    <li><strong>Tecnologias:</strong> Jira, Confluence, Salesforce, MS Project, Dynamics 365, Microsoft Office, Trello.</li>
+    <li><strong>Gestão e Governança:</strong> Gestão de Projetos (Ágil, Scrum, Kanban, Scrumban), Operações de TI e PMO, Governança, Escopo, SLAs, Cronograma, Gestão de Riscos, Negociação.</li>
+    <li><strong>Sistemas e Ferramentas:</strong> Jira, Confluence, Salesforce, MS Project, Dynamics 365, Microsoft Office (Excel, Word, PowerPoint), Trello.</li>
   </ul>
 
-  <h2>FORMAÇÃO ACADÊMICA E CERTIFICAÇÕES</h2>
+  <!-- IDIOMAS -->
+  <h2>IDIOMAS</h2>
   <ul>
-    <li><strong>Certificação PMP® (Project Management Professional)</strong> — Em preparação / Previsão: 2026</li>
-    <li><strong>Bacharelado em Ciência de Dados e Inteligência Artificial</strong> — UniDomBosco &nbsp;|&nbsp; <strong>Gestão de Projetos</strong> — Veduca &nbsp;|&nbsp; <strong>Customer Success</strong> — Sebrae</li>
+    <li>Português (Nativo)</li>
+  </ul>
+
+  <!-- HABILIDADES INTERPESSOAIS (SOFT SKILLS) -->
+  <h2>HABILIDADES INTERPESSOAIS (SOFT SKILLS)</h2>
+  <ul>
+    <li>Liderança e Resolução de Conflitos</li>
+    <li>Visão de Negócio</li>
+    <li>Comunicação Transparente</li>
   </ul>
 
 </body>
