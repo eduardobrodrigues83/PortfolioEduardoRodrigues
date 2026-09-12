@@ -6,74 +6,83 @@
   <style>
     @page {
       size: A4;
-      margin: 1.27cm;
+      margin: 1.0cm 1.27cm 1.0cm 1.27cm;
     }
     body {
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.35;
+      font-size: 9.5pt;
+      line-height: 1.25;
       color: #111111;
       margin: 0;
       padding: 0;
       background: #ffffff;
     }
     h1 {
-      font-size: 15pt;
+      font-size: 14pt;
       font-weight: bold;
       text-transform: uppercase;
-      margin: 0 0 4px 0;
+      margin: 0 0 2px 0;
       color: #000000;
       text-align: center;
       letter-spacing: 0.5px;
     }
     .contact-info {
       text-align: center;
-      font-size: 9.5pt;
+      font-size: 8.5pt;
       color: #333333;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .role-title {
       text-align: center;
-      font-size: 11pt;
+      font-size: 10pt;
       font-weight: bold;
       color: #222222;
-      margin-bottom: 12px;
-    }
-    hr {
-      border: 0;
-      border-top: 1px solid #333333;
-      margin: 10px 0;
+      margin-bottom: 6px;
     }
     h2 {
-      font-size: 11pt;
+      font-size: 9.5pt;
       font-weight: bold;
       text-transform: uppercase;
       color: #000000;
-      margin: 10px 0 5px 0;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid #444444;
-      padding-bottom: 2px;
+      margin: 6px 0 3px 0;
+      letter-spacing: 0.4px;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 1px;
     }
     p {
-      margin: 0 0 6px 0;
+      margin: 0 0 4px 0;
       text-align: justify;
     }
     ul {
-      margin: 0 0 6px 0;
-      padding-left: 18px;
+      margin: 0 0 4px 0;
+      padding-left: 14px;
     }
     li {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     strong {
       color: #000000;
     }
-    .case-item {
-      margin-bottom: 6px;
-    }
-    .case-header {
+    .job-title-row {
+      display: flex;
+      justify-content: space-between;
       font-weight: bold;
       color: #000000;
+      margin-top: 4px;
+    }
+    .job-sub {
+      font-style: italic;
+      color: #444444;
+      font-size: 8.5pt;
+      margin-bottom: 2px;
+    }
+    .compact-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .compact-grid div {
+      flex: 1;
     }
   </style>
 </head>
@@ -89,42 +98,57 @@
 
   <h2>RESUMO PROFISSIONAL</h2>
   <p>
-    Ajudo empresas a executarem projetos críticos de tecnologia com segurança e previsibilidade. Em 18 anos de trajetória em TI — sendo a última década dedicada exclusivamente à gestão de projetos —, orquestrei mais de 13.400 horas de implantações em ambientes de alta complexidade. Atuo como facilitador, combinando base técnica com gestão próxima para conectar as necessidades de negócio à execução. Para isso, lidero e atuo em sinergia com equipes multidisciplinares, engajando Executivos de Vendas, Arquitetos de Solução, Product Owners, Consultores de Implantação e Líderes Técnicos. Histórico comprovado de 188 entregas para 88 clientes, destravando +R$ 1,7 Milhão em faturamento, com foco em comunicação clara, processos ágeis e governança (Scrum, Kanban, PMP em andamento).
+    Ajudo empresas a executarem projetos críticos de tecnologia com segurança e previsibilidade. Em 18 anos de trajetória em TI — sendo a última década dedicada exclusivamente à gestão de projetos —, orquestrei mais de 13.400 horas de implantações em ambientes de alta complexidade. Atuo como facilitador, conectando necessidades de negócio aos times de engenharia. Histórico de 188 entregas para 88 clientes, destravando +R$ 1,7 Milhão em faturamento com foco em governança (Scrum, Kanban, PMP em andamento).
   </p>
+
+  <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+
+  <div class="job-title-row">
+    <span>PIXEON &nbsp;|&nbsp; Gerente de Projetos Sênior</span>
+    <span>Junho 2016 – Maio 2026</span>
+  </div>
+  <div class="job-sub">Liderança simultânea de múltiplos projetos públicos e privados de implantação de sistemas de saúde (RIS, LIS, PACS).</div>
+  <ul>
+    <li>Gerenciei stakeholders executivos e equipes multidisciplinares em mais de 20 projetos simultâneos, assegurando estabilidade operacional, conformidade com SLAs e aceleração do go-live.</li>
+    <li>Coordenei implantações de sistemas RIS, LIS e PACS em instituições públicas e privadas, mitigando riscos em ambientes críticos.</li>
+    <li>Otimizei recursos e cronogramas de implantação, acelerando entregas em ambientes laboratoriais e de diagnóstico por imagem.</li>
+  </ul>
+
+  <div class="job-title-row">
+    <span>PIXEON &nbsp;|&nbsp; Consultor de Negócios / Analista / Suporte</span>
+    <span>Agosto 2012 – Maio 2016</span>
+  </div>
+  <div class="job-sub">Atuação estratégica no desenho de soluções e na interface técnica e consultiva com clientes de diagnóstico por imagem.</div>
+  <ul>
+    <li>Mapeei requisitos complexos e desenhei soluções customizadas de radiologia e diagnósticos.</li>
+    <li>Lidereu a capacitação técnica e clínica de usuários para adoção de novos sistemas e evoluí do suporte N2 para consultoria técnica.</li>
+  </ul>
+
+  <div class="job-title-row">
+    <span>HP (HEWLETT-PACKARD) &nbsp;|&nbsp; Analista de Suporte</span>
+    <span>Agosto 2008 – Agosto 2012</span>
+  </div>
+  <ul>
+    <li>Administrei sistemas corporativos críticos de grande porte (enterprise) e atuei na resolução de incidentes complexos via Remote Desktop.</li>
+  </ul>
+
+  <h2>CASOS DE SUCESSO & IMPACTO GLOBAL</h2>
+  <ul>
+    <li><strong>Lacen/MG (23 Meses | 1.215h):</strong> 1ª integração do LIS ao Ministério da Saúde do Brasil (-73% no tempo de laudos: 11 para 3 dias). Receita: R$ 149k + R$ 26k/mês MRR.</li>
+    <li><strong>Hospital de Clínicas de Uberlândia / EBSERH (15 Meses | 828h):</strong> 3 projetos em ambiente de alta complexidade. Receita liberada: R$ 125.600.</li>
+    <li><strong>Laboratório Privado (25 Meses | 703h):</strong> 7 projetos com fidelização e upsell. Receita: R$ 113.300 eventual + R$ 22.400/mês recorrente.</li>
+  </ul>
 
   <h2>COMPETÊNCIAS</h2>
   <ul>
-    <li><strong>Gestão e Governança:</strong> Gestão de Projetos (Ágil, Scrum, Kanban, Scrumban), Operações de TI e PMO, Gestão de Escopo, Cronograma, SLAs, Negociação e Relacionamento Consultivo.</li>
+    <li><strong>Gestão e Governança:</strong> Gestão de Projetos (Ágil, Scrum, Kanban, Scrumban), Operações de TI e PMO, Escopo, SLAs, Cronograma, Negociação.</li>
     <li><strong>Tecnologias:</strong> Jira, Confluence, Salesforce, MS Project, Dynamics 365, Microsoft Office, Trello.</li>
   </ul>
-
-  <h2>MÉTRICAS E IMPACTO GLOBAL</h2>
-  <ul>
-    <li><strong>Volume de Entregas:</strong> Conclusão de 188 projetos para 88 clientes no setor de saúde digital.</li>
-    <li><strong>Gestão de Valor:</strong> Destravamento de +R$ 1,7 Milhão em receita de implantação eventual, além da ativação de faturamento recorrente (MRR).</li>
-    <li><strong>Execução Operacional:</strong> Mais de 13.400 horas de projetos orquestradas e transicionadas para suporte.</li>
-  </ul>
-
-  <h2>CASOS DE SUCESSO E EXPERIÊNCIA PRÁTICA</h2>
-  <div class="case-item">
-    <div class="case-header">Lacen/MG | Duração: 23 Meses</div>
-    <p>Liderou 3 projetos complexos com 1.215h de implantação. Resultados: Redução do tempo de laudos de 11 para 3 dias (-73%). Receita destravada: R$ 149.000 + R$ 26.000/mês.</p>
-  </div>
-  <div class="case-item">
-    <div class="case-header">Hospital de Clínicas de Uberlândia (EBSERH) | Duração: 15 Meses</div>
-    <p>Coordenação de 3 projetos (828h) com execução ágil em ambiente de alta complexidade. Resultados: Receita liberada de R$ 125.600.</p>
-  </div>
-  <div class="case-item">
-    <div class="case-header">Laboratório | Duração: 25 Meses</div>
-    <p>Gestão de escopo para 7 projetos implantados (703h). Resultados: Fidelização e expansão de conta (upsell), gerando R$ 113.300 em receita eventual e R$ 22.400/mês recorrente.</p>
-  </div>
 
   <h2>FORMAÇÃO ACADÊMICA E CERTIFICAÇÕES</h2>
   <ul>
     <li><strong>Certificação PMP® (Project Management Professional)</strong> — Em preparação / Previsão: 2026</li>
-    <li><strong>Bacharelado em Ciência de Dados e Inteligência Artificial</strong> — UniDomBosco</li>
-    <li><strong>Gestão de Projetos</strong> — Veduca</li>
-    <li><strong>Customer Success</strong> — Sebrae</li>
+    <li><strong>Bacharelado em Ciência de Dados e Inteligência Artificial</strong> — UniDomBosco &nbsp;|&nbsp; <strong>Gestão de Projetos</strong> — Veduca &nbsp;|&nbsp; <strong>Customer Success</strong> — Sebrae</li>
   </ul>
 
 </body>
