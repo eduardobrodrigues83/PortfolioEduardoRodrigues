@@ -15,7 +15,7 @@
     body {
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
       font-size: 9.5pt;
-      line-height: 1.26;
+      line-height: 1.28;
       color: #111111;
       margin: 0 auto;
       padding: 10px 10px;
@@ -70,9 +70,17 @@
       font-size: 15pt;
       font-weight: bold;
       text-transform: uppercase;
-      margin: 0 0 3px 0;
+      margin: 0 0 2px 0;
       color: #000000;
       letter-spacing: 0.5px;
+    }
+    .header .subtitle {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #1a365d;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      letter-spacing: 0.3px;
     }
     .header .contact-info {
       font-size: 9.2pt;
@@ -94,7 +102,7 @@
       font-weight: bold;
       text-transform: uppercase;
       color: #1a365d;
-      margin: 9px 0 3px 0;
+      margin: 10px 0 3px 0;
       padding-bottom: 1px;
       border-bottom: 1.5px solid #2b4c7e;
       letter-spacing: 0.4px;
@@ -108,24 +116,24 @@
     }
     ul {
       margin: 3px 0 4px 0;
-      padding-left: 16px;
+      padding-left: 18px;
     }
     li {
-      margin-bottom: 2px;
+      margin-bottom: 2.5px;
       text-align: justify;
     }
     strong {
       color: #000000;
     }
 
-    /* Flex row for left/right alignment (Jobs, Education, Projects) */
+    /* Flex row for left/right alignment */
     .flex-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       font-weight: bold;
       color: #000000;
-      margin-top: 4px;
+      margin-top: 5px;
       margin-bottom: 1px;
     }
     .flex-row .title-left {
@@ -140,9 +148,14 @@
 
     .sub-info {
       font-style: italic;
-      color: #444444;
+      color: #333333;
       font-size: 8.8pt;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
+    }
+
+    .inline-skills {
+      margin: 4px 0;
+      line-height: 1.4;
     }
 
     /* Print styles */
@@ -180,30 +193,23 @@
   <!-- Header Centralizado -->
   <div class="header">
     <h1>EDUARDO BEZERRA RODRIGUES</h1>
+    <div class="subtitle">GERENTE DE PROJETOS | PROJECT MANAGER</div>
     <div class="contact-info">
-      São Bernardo do Campo, SP &nbsp;|&nbsp; +55 (11) 98534-4770 &nbsp;|&nbsp; eduardobr83@icloud.com
-    </div>
-    <div>
-      <a href="https://www.linkedin.com/in/eduardo-rodrigues-48154525" target="_blank" rel="noopener noreferrer" class="linkedin-link">https://www.linkedin.com/in/eduardo-rodrigues-48154525</a>
+      São Bernardo do Campo, SP &nbsp;|&nbsp; +55 (11) 98534-4770 &nbsp;|&nbsp; <a href="mailto:eduardobr83@icloud.com">eduardobr83@icloud.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/eduardo-rodrigues-48154525" target="_blank" rel="noopener noreferrer" class="linkedin-link">linkedin.com/in/eduardo-rodrigues-48154525</a>
     </div>
   </div>
 
-  <!-- OBJETIVO -->
-  <h2>OBJETIVO</h2>
+  <!-- PERFIL PROFISSIONAL -->
+  <h2>PERFIL PROFISSIONAL</h2>
   <p>
-    <strong>Cargo Alvo:</strong> Gerente de Projetos | PMO
-  </p>
-  <p>
-    Ajudo empresas a executarem projetos críticos de tecnologia com segurança e previsibilidade. Em 18 anos de trajetória em TI — sendo a última década dedicada exclusivamente à gestão de projetos —, orquestrei mais de 13.400 horas de implantações em ambientes de alta complexidade. Atuo como facilitador, conectando necessidades de negócio aos times de engenharia. Histórico de 188 entregas para 88 clientes, destravando +R$ 1,7 Milhão em faturamento com foco em governança (Scrum, Kanban, PMP em andamento).
+    Gerente de Projetos Sênior com 18 anos de trajetória em Tecnologia da Informação e 10 anos dedicados à gestão de projetos. Experiência em implantações end-to-end, integração e migração de sistemas em ambientes críticos de saúde, com atuação em RIS, LIS e PACS. Gestão simultânea de 20+ projetos, 188 entregas e 88 clientes, totalizando mais de 13.400 horas de implantações. Perfil orientado a governança, gestão de escopo, cronograma, riscos, stakeholders, SLAs, mudanças e previsibilidade de entregas. Atuação como facilitador entre negócio, operação e tecnologia, com histórico de contribuição para mais de R$ 1,7 milhão em faturamento.
   </p>
 
-  <!-- FORMAÇÃO ACADÊMICA -->
-  <h2>FORMAÇÃO ACADÊMICA</h2>
-  <div class="flex-row">
-    <span class="title-left">BACHARELADO EM CIÊNCIA DE DADOS E INTELIGÊNCIA ARTIFICIAL</span>
-    <span class="date-right"><strong>Cursando</strong></span>
-  </div>
-  <div class="sub-info">UniDomBosco (Previsão de término: 2028)</div>
+  <!-- COMPETÊNCIAS DE GESTÃO -->
+  <h2>COMPETÊNCIAS DE GESTÃO</h2>
+  <p class="inline-skills">
+    Gestão de Projetos • Governança • PMO • Gestão de Escopo • Cronograma • Gestão de Riscos • Gestão de Mudanças • Gestão de Stakeholders • Gestão de Recursos • KPIs • SLAs • Status Report • Gestão de Crises • Escalonamento Executivo • Negociação • Tomada de Decisão • Go-live • Implantação End-to-End • Transformação Digital
+  </p>
 
   <!-- EXPERIÊNCIA PROFISSIONAL -->
   <h2>EXPERIÊNCIA PROFISSIONAL</h2>
@@ -212,66 +218,75 @@
     <span class="title-left">Gerente de Projetos Sênior | Pixeon</span>
     <span class="date-right">Jun/2016 – Mai/2026</span>
   </div>
-  <div class="sub-info">Liderança simultânea de múltiplos projetos públicos e privados de implantação de sistemas de saúde (RIS, LIS, PACS).</div>
+  <div class="sub-info">Liderança simultânea de múltiplos projetos públicos e privados de implantação de sistemas de saúde (RIS, LIS e PACS).</div>
   <ul>
-    <li>Gerenciei stakeholders executivos e equipes multidisciplinares em mais de 20 projetos simultâneos, assegurando estabilidade operacional, conformidade com SLAs e aceleração do go-live.</li>
-    <li>Coordenei implantações de sistemas RIS, LIS e PACS em instituições públicas e privadas, mitigando riscos em ambientes críticos.</li>
-    <li>Otimizei recursos e cronogramas de implantação, acelerando entregas em ambientes laboratoriais e de diagnóstico por imagem.</li>
+    <li>Gerenciei portfólio de 20+ projetos simultâneos, coordenando stakeholders executivos e equipes multidisciplinares, com foco em escopo, cronograma, riscos, SLAs e previsibilidade do go-live.</li>
+    <li>Coordenei implantações end-to-end de RIS, LIS e PACS, conduzindo planejamento, integração entre sistemas, homologação, gestão de riscos e entrada em produção em ambientes críticos.</li>
+    <li>Atuei na gestão de mudanças, alinhamento de expectativas, escalonamento executivo e condução de planos de ação para cenários de crise e desvios de prazo.</li>
+    <li>Otimizei recursos e cronogramas de implantação, acelerando entregas em projetos de diagnóstico por imagem e contribuindo para estabilidade operacional.</li>
   </ul>
 
   <div class="flex-row">
-    <span class="title-left">Consultor de Negócios / Analista / Suporte | Pixeon</span>
+    <span class="title-left">Consultor de Negócios / Analista de Suporte | Pixeon</span>
     <span class="date-right">Ago/2012 – Mai/2016</span>
   </div>
-  <div class="sub-info">Atuação estratégica no desenho de soluções e na interface técnica e consultiva com clientes de diagnóstico por imagem.</div>
+  <div class="sub-info">Atuação estratégica no desenho de soluções e interface técnica e consultiva com clientes de diagnóstico por imagem.</div>
   <ul>
-    <li>Mapeei requisitos complexos e desenhei soluções customizadas de radiologia e diagnósticos.</li>
-    <li>Liderei a capacitação técnica e clínica de usuários para adoção de novos sistemas e evoluí do suporte N2 para consultoria técnica.</li>
+    <li>Mapeei requisitos complexos e desenhei soluções customizadas para radiologia e diagnóstico por imagem, conectando necessidades do negócio às capacidades do produto.</li>
+    <li>Liderei capacitação técnica e clínica de usuários para adoção de novos sistemas e evoluí do suporte N2 para atuação consultiva.</li>
   </ul>
 
   <div class="flex-row">
     <span class="title-left">Analista de Suporte | HP (Hewlett-Packard)</span>
     <span class="date-right">Ago/2008 – Ago/2012</span>
   </div>
+  <div class="sub-info">Atuação em ambientes corporativos críticos e suporte a operações de grande porte.</div>
   <ul>
-    <li>Administrei sistemas corporativos críticos de grande porte (enterprise) e atuei na resolução de incidentes complexos via Remote Desktop.</li>
+    <li>Administrei sistemas corporativos críticos de grande porte (enterprise) e atuei na resolução de incidentes complexos via Remote Desktop, com foco em continuidade operacional.</li>
   </ul>
+
+  <!-- CASOS DE SUCESSO E PROJETOS DE DESTAQUE -->
+  <h2>CASOS DE SUCESSO E PROJETOS DE DESTAQUE</h2>
+  <ul>
+    <li><strong>Laboratório Público (23 meses | 1.215h):</strong> liderou a 1ª integração do LIS ao Ministério da Saúde do Brasil, reduzindo em 73% o tempo de laudos (11 para 3 dias). Receita liberada: +R$ 145 mil, com MRR de R$ 25 mil/mês.</li>
+    <li><strong>Hospital Universitário Público (15 meses | 828h):</strong> condução de 3 projetos em ambiente de alta complexidade. Receita liberada: +R$ 125 mil.</li>
+    <li><strong>Laboratório Privado (25 meses | 703h):</strong> gestão de 7 projetos com fidelização e upsell. Receita: +R$ 113 mil eventual, com MRR de R$ 22 mil/mês.</li>
+  </ul>
+
+  <!-- COMPETÊNCIAS TÉCNICAS E FERRAMENTAS -->
+  <h2>COMPETÊNCIAS TÉCNICAS E FERRAMENTAS</h2>
+  <p>
+    <strong>Metodologias:</strong> Agile, Scrum, Kanban, Scrumban, PMBOK, Waterfall e abordagens Híbridas.
+  </p>
+  <p>
+    <strong>Ferramentas e sistemas:</strong> Jira, Confluence, Salesforce, Microsoft Project, Microsoft Planner, Teams, Dynamics 365, Microsoft Office (Excel, Word e PowerPoint), Trello.
+  </p>
+
+  <!-- FORMAÇÃO ACADÊMICA -->
+  <h2>FORMAÇÃO ACADÊMICA</h2>
+  <div class="flex-row">
+    <span class="title-left">Bacharelado em Ciência de Dados e Inteligência Artificial — UniDomBosco</span>
+    <span class="date-right">Cursando — previsão de conclusão: 2028</span>
+  </div>
 
   <!-- CURSOS E CERTIFICAÇÕES -->
   <h2>CURSOS E CERTIFICAÇÕES</h2>
   <ul>
-    <li><strong>Certificação PMP® (Project Management Professional)</strong> — PMI (Em preparação / Previsão: 2º Semestre de 2027)</li>
+    <li><strong>PMP® — Project Management Professional</strong> | PMI — Em preparação | Previsão: 2º semestre de 2027</li>
     <li><strong>Gestão de Projetos</strong> — Veduca</li>
     <li><strong>Customer Success</strong> — Sebrae</li>
   </ul>
 
-  <!-- CASOS DE SUCESSO & PROJETOS DE DESTAQUE -->
-  <h2>CASOS DE SUCESSO &amp; PROJETOS DE DESTAQUE</h2>
-  <ul>
-    <li><strong>Laboratório Público Central (23 Meses | 1.215h):</strong> 1ª integração do LIS ao Ministério da Saúde do Brasil (-73% no tempo de laudos: 11 para 3 dias). Receita liberada: + de R$ 145k + MRR + de R$ 25k/mês.</li>
-    <li><strong>Hospital Universitário Público (15 Meses | 828h):</strong> 3 projetos em ambiente de alta complexidade. Receita liberada: + de R$ 125k.</li>
-    <li><strong>Laboratório Privado (25 Meses | 703h):</strong> 7 projetos com fidelização e upsell. Receita: + de R$ 113k eventual + MRR + de R$ 22k/mês recursivo.</li>
-  </ul>
-
-  <!-- HABILIDADES TÉCNICAS (TECH SKILLS) -->
-  <h2>HABILIDADES TÉCNICAS (TECH SKILLS)</h2>
-  <ul>
-    <li><strong>Gestão e Governança:</strong> Gestão de Projetos (Ágil, Scrum, Kanban, Scrumban), Operações de TI e PMO, Governança, Escopo, SLAs, Cronograma, Gestão de Riscos, Negociação.</li>
-    <li><strong>Sistemas e Ferramentas:</strong> Jira, Confluence, Salesforce, MS Project, Dynamics 365, Microsoft Office (Excel, Word, PowerPoint), Trello.</li>
-  </ul>
+  <!-- COMPETÊNCIAS INTERPESSOAIS -->
+  <h2>COMPETÊNCIAS INTERPESSOAIS</h2>
+  <p class="inline-skills">
+    Liderança • Gestão de Stakeholders • Resolução de Conflitos • Negociação • Comunicação Transparente • Visão de Negócios • Tomada de Decisão • Gestão de Crises
+  </p>
 
   <!-- IDIOMAS -->
   <h2>IDIOMAS</h2>
   <ul>
-    <li>Português (Nativo)</li>
-  </ul>
-
-  <!-- HABILIDADES INTERPESSOAIS (SOFT SKILLS) -->
-  <h2>HABILIDADES INTERPESSOAIS (SOFT SKILLS)</h2>
-  <ul>
-    <li>Liderança e Resolução de Conflitos</li>
-    <li>Visão de Negócio</li>
-    <li>Comunicação Transparente</li>
+    <li><strong>Português</strong> — Nativo</li>
   </ul>
 
 </body>
